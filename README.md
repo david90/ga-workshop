@@ -1,5 +1,4 @@
-# USThing iOS Workshop Session 3 and 4
-
+#  Assembly Workshop - iOS App on the Serverless Architecture
 
 ### About
 Building an app that has cloud features (upload files, social interaction, news feed etc.) requires a backend server. 
@@ -9,11 +8,6 @@ We will use [Skygear](https://skygear.io), an opensoure BaaS platform to build a
 ## Part 0 - Concepts
 
 [Serverless](https://martinfowler.com/articles/serverless.html)
-
-### Cloud Database
-
-### SDK
-
 
 ### CocoaPods
 
@@ -62,8 +56,8 @@ import SKYKit
  ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.        
-        SKYContainer.default().configAddress("https://usthingworkshop17.skygeario.com/")
-        SKYContainer.default().configure(withAPIKey: "ac2d905a3baf4bf5bc2166af0e51d2be")
+        SKYContainer.default().configAddress("YOUR_ENDPOINT")
+        SKYContainer.default().configure(withAPIKey: "APIKEY")
         
         return true
     }
@@ -558,8 +552,7 @@ override func viewDidLoad() {
 ### Take home exercise: 
 Implement a self-destruction timer (Photo will automatically distroy after 1 min) 
 
-Hint: ~~ You can set up a timestamp in the photo record~~
-
+Hint: ~~You can set up a timestamp in the photo record~~
 
 
 Appendix:
