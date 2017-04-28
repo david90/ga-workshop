@@ -1,4 +1,4 @@
-#  Assembly Workshop - iOS App on the Serverless Architecture
+# General Assembly Workshop - iOS App on the Serverless Architecture
 
 ### About
 Building an app that has cloud features (upload files, social interaction, news feed etc.) requires a backend server. 
@@ -495,8 +495,8 @@ Register to recieve push notification
  ```
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        SKYContainer.default().configAddress("https://seanphotofeed.skygeario.com/")
-        SKYContainer.default().configure(withAPIKey: "xxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+        SKYContainer.default().configAddress("YOUR_ENDPOINT")
+        SKYContainer.default().configure(withAPIKey: "API_KEY")
 
         // Add the code below
         SKYContainer.default().delegate = self
