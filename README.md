@@ -1,7 +1,8 @@
-# General Assembly Workshop - iOS App on the Serverless Architecture
+# General Assembly Workshop - Building iOS App on the Serverless Architecture
 
 ### About
-Building an app that has cloud features (upload files, social interaction, news feed etc.) requires a backend server. 
+Building an app that has cloud features (upload files, social interaction, news feed etc.) requires a backend server.
+As frontend mobile developers, managing your own servers takes extra work - instead you can focus on UI/UX and app performance.
 
 We will use [Skygear](https://skygear.io), an opensoure BaaS platform to build a Instagram-like photo app in a Serverless approach. 
 
@@ -14,7 +15,7 @@ We will use [Skygear](https://skygear.io), an opensoure BaaS platform to build a
 - CocoaPods is a dependency manager for Swift and Objective-C Cocoa projects. [Guide for installing CocoaPods](https://guides.cocoapods.org/using/getting-started.html#getting-started)
 
 ## Part I - Cloud Feature Basics
-
+### Step 0
 1. Project setup with CocoaPods
  - Initialize CocoaPods with `pod init`
  - Add `SKYKit` to *Podfile*, now the Podfile looks like this:
@@ -36,8 +37,9 @@ We will use [Skygear](https://skygear.io), an opensoure BaaS platform to build a
 - After installing the pods, we will work on *swift-workshop.xcworkspace* instead of *swift-workshop.xcodeproj*
 - Let's open *swift-workshop.xcworkspace*
 
-[Step 0]
+Download [Step 0] for the above steps.
 
+### Step 1
 1. Setting up the Skygear Server
 
  - Signup at [portal.skygear.io](portal.skygear.io)
@@ -63,8 +65,9 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     }
  ```  
 
-[Step 1]
+[Step 1] for the above steps.
 
+### Step 2
 1. User Signup and Login 
  - We will learn to use `signup(WithUsername: password)` and `login(WithUsername: password)` to do the user authentication.
  - First we will setup the layout (This time we will be very rough)
@@ -120,7 +123,9 @@ self.present(alert, animated: true, completion: nil)
  `container.currentUserRecordID`
  `SKYRecordID(recordType: "user", name: value)`
 
-[Step 2]
+Download [Step 2] for the above steps.
+
+### Step 3
 
 1. Implementing News feed Layout 
  - We will use `UITableView`, let's create a Table View in the storyboard.
@@ -128,8 +133,9 @@ self.present(alert, animated: true, completion: nil)
 
  - We will use a table view to show the todo items. Create a `UITableViewController` Class and name it `newsTableViewController`.
 
-[Step 3]
+Download [Step 3] for the above steps.
 
+### Step 4
 1. Loading and displaying records from the default skygear server 
  - Filling in the data
  - Perform a query on the cloud database
@@ -194,7 +200,9 @@ self.present(alert, animated: true, completion: nil)
     }
 
  ```
-[Step 4]
+Download [Step 4] for the above steps.
+
+### Step 5
 
 - Filling in the blanks:
 
@@ -214,7 +222,7 @@ self.present(alert, animated: true, completion: nil)
     }
 ```
 
-[Step 5]
+[Step 5] for the above steps.
 
 ### Complete!
 
@@ -243,7 +251,12 @@ We will also do much more beyond simple read / write.
 ## Before we begin
 - Let's make sure your app from the last session is ready, and there is the create new post version works.
 
-[Step 6]
+### Step 6
+
+- Excercise: "Add a new post" feature
+Download [Step 6] for the above steps.
+
+### Step 7
 
 ### Warm up exercise:
 - How to edit an existing post?
@@ -350,7 +363,9 @@ We will also do much more beyond simple read / write.
     }
  ```
 
- [Step 7]
+ [Step 7] for the above steps.
+ 
+ ### Step 8
  
  - Using the [File Assets API](https://docs.skygear.io/guide/cloud-db/data-types/ios/#assets)
 
@@ -397,8 +412,11 @@ We will also do much more beyond simple read / write.
 
  You should be able to get the uploaded SKYAsset object, now you need to set it to your post and save it when you upload it.
 
- [Step 8]
 
+
+Download  [Step 8] for the above steps.
+
+### Step 9
  - How do we get back the image?
  You can access the uploaded asset in the post record
 
@@ -425,7 +443,9 @@ We will also do much more beyond simple read / write.
 
  ```
 
- [Step 9]
+Download [Step 9] for the above steps.
+
+### Extras
 
 1. Liking a photo 
  - Understanding the record relation
